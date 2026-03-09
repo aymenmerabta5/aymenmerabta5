@@ -1,19 +1,17 @@
 <h1 align="center">Hi 👋, I'm Aimen Merabta</h1>
 <h3 align="center">A fullstack developer from algeria, constantine</h3>
 
-- 🔭 I’m currently working on **Eventifive**
+- 🔭 I’m currently working on **Stag.io**
 
-- 🌱 I’m currently learning **Kafka**
+- 🌱 I’m currently learning **Effect.js**
 
-- 👯 I’m developing **Clarion**
-
-- 👨‍💻 All of my projects are available at [https://aymenmerabta.news](https://aymenmerabta.news)
+- 👨‍💻 All of my projects are available at ([https://aymenmerabta.news](https://aymen-merabta.vercel.app/))
 
 - 💬 Ask me about **What you want**
 
 - 📫 How to reach me **aimen.merabta@univ-constantine2.dz**
 
-- 📄 Know about my experiences [See my profile](See my profile)
+- 📄 Know about my experiences
 
 - ⚡ Fun fact **I have a high iq with low eq**
 
