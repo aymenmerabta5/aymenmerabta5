@@ -17,7 +17,7 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://fb.com/https://www.facebook.com/aymen.merabta.31/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/aymen.merabta.31/" height="30" width="40" /></a>
+<a href="https://www.facebook.com/aymen.merabta.31/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/aymen.merabta.31/" height="30" width="40" /></a>
 <a href="https://instagram.com/mrx.grid" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="mrx.grid" height="30" width="40" /></a>
 <a href="https://discord.gg/aymoundesanta" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="aymoundesanta" height="30" width="40" /></a>
 </p>
