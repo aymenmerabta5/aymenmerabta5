@@ -33,13 +33,13 @@
       <g transform="translate(40 92)">
         <rect width="240" height="112" rx="18" fill="#0F1F38" stroke="#334155"/>
         <text x="20" y="29" class="label">LINES ADDED</text>
-        <text x="20" y="70" class="value" fill="#34D399">+966,889</text>
+        <text x="20" y="70" class="value" fill="#34D399">+966,890</text>
         <text x="20" y="94" class="note">public default branches</text>
       </g>
       <g transform="translate(300 92)">
         <rect width="240" height="112" rx="18" fill="#0F1F38" stroke="#334155"/>
         <text x="20" y="29" class="label">LINES REMOVED</text>
-        <text x="20" y="70" class="value" fill="#FB7185">−227,895</text>
+        <text x="20" y="70" class="value" fill="#FB7185">−227,896</text>
         <text x="20" y="94" class="note">refactors included</text>
       </g>
       <g transform="translate(560 92)">
@@ -51,7 +51,7 @@
       <g transform="translate(820 92)">
         <rect width="240" height="112" rx="18" fill="#0F1F38" stroke="#334155"/>
         <text x="20" y="29" class="label">COMMITS SCANNED</text>
-        <text x="20" y="70" class="value" fill="#22D3EE">372</text>
+        <text x="20" y="70" class="value" fill="#22D3EE">373</text>
         <text x="20" y="94" class="note">15 original repositories</text>
       </g>
   <text x="40" y="242" class="section">MOST CODE CHANGED BY REPOSITORY</text>
