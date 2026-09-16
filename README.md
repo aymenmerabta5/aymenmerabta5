@@ -44,6 +44,35 @@ Explore the case studies and more shipped work on my **[portfolio](https://aymen
 | **[LLM Fine-Tuning Toolkit](https://github.com/aymenmerabta5/llm-finetuning-toolkit)** | Runnable projects for causal language modeling, named-entity recognition, and summarization | Transformers, PEFT, LoRA, Python |
 | **[ViT from Scratch](https://github.com/aymenmerabta5/vit-from-scratch-pizza-steak-sushi)** | A compact Vision Transformer paper replication with patch, class-token, and positional embeddings | PyTorch, Python |
 
+## GitHub by the numbers
+
+<p align="center">
+  <img src="./assets/code-stats.svg" alt="Public code activity showing lines added, lines removed, net change, commits, and leading repositories" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/aymenmerabta5">
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=aymenmerabta5&theme=github_dark" alt="Aymen's GitHub contribution history" width="100%" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://git.io/streak-stats">
+    <img src="https://streak-stats.demolab.com?user=aymenmerabta5&theme=github-dark-blue&hide_border=true" alt="Aymen's GitHub contribution streak" width="49%" />
+  </a>
+  <a href="https://github.com/vn7n24fzkq/github-profile-summary-cards">
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=aymenmerabta5&theme=github_dark" alt="Aymen's top languages by repository" width="49%" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="./assets/github-metrics.svg" alt="Detailed GitHub metrics including commits, pull requests, issues, contributions, and repositories" width="55%" />
+</p>
+
+<p align="center">
+  <sub>Public GitHub data, refreshed automatically each day. Code-line totals use GitHub contributor statistics for original, non-archived repositories and may include generated or vendored code.</sub>
+</p>
+
 ## Technology stack
 
 **Product engineering**
