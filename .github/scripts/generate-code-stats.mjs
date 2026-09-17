@@ -1,4 +1,5 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 
 const username = process.env.PROFILE_USERNAME || "aymenmerabta5";
 const token = process.env.GITHUB_TOKEN;
@@ -172,6 +173,41 @@ const maxChanges = Math.max(
   1,
 );
 
+const renderVersion = 2;
+const statsHash = createHash("sha256")
+  .update(
+    JSON.stringify({
+      renderVersion,
+      repositories: readyRepositories
+        .map(({ name, additions, deletions, commits }) => ({
+          name,
+          additions,
+          deletions,
+          commits,
+        }))
+        .sort((left, right) => left.name.localeCompare(right.name)),
+    }),
+  )
+  .digest("hex")
+  .slice(0, 16);
+
+let existingSvg = "";
+
+try {
+  existingSvg = await readFile("assets/code-stats.svg", "utf8");
+} catch (error) {
+  if (error.code !== "ENOENT") {
+    throw error;
+  }
+}
+
+if (existingSvg.includes(`data-stats-hash="${statsHash}"`)) {
+  console.log(
+    `Public code statistics are unchanged across ${readyRepositories.length} repositories.`,
+  );
+  process.exit(0);
+}
+
 const formatNumber = (value) => new Intl.NumberFormat("en-US").format(value);
 const signedNumber = (value) =>
   `${value >= 0 ? "+" : "−"}${formatNumber(Math.abs(value))}`;
@@ -254,7 +290,7 @@ const rowMarkup = topRepositories
   })
   .join("");
 
-const svg = `<svg width="1080" height="535" viewBox="0 0 1080 535" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
+const svg = `<svg width="1080" height="535" viewBox="0 0 1080 535" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description" data-stats-hash="${statsHash}">
   <title id="title">${escapeXml(username)} public code activity</title>
   <desc id="description">GitHub contributor statistics for lines added, lines removed, commits, and the most active original public repositories.</desc>
   <defs>
