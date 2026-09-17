@@ -28,31 +28,31 @@
   <rect x="1" y="1" width="1078" height="533" rx="24" fill="url(#background)" stroke="#334155" stroke-width="2"/>
   <rect x="40" y="28" width="5" height="34" rx="2.5" fill="url(#accent)"/>
   <text x="60" y="51" class="heading">Public code activity</text>
-  <text x="1040" y="49" text-anchor="end" class="updated">Updated 17 Sept 2026</text>
+  <text x="1040" y="49" text-anchor="end" class="updated">Updated 17 Sept 2026, 18:54</text>
   
       <g transform="translate(40 92)">
         <rect width="240" height="112" rx="18" fill="#0F1F38" stroke="#334155"/>
         <text x="20" y="29" class="label">LINES ADDED</text>
-        <text x="20" y="70" class="value" fill="#34D399">+966,890</text>
+        <text x="20" y="70" class="value" fill="#34D399">+1,382,266</text>
         <text x="20" y="94" class="note">public default branches</text>
       </g>
       <g transform="translate(300 92)">
         <rect width="240" height="112" rx="18" fill="#0F1F38" stroke="#334155"/>
         <text x="20" y="29" class="label">LINES REMOVED</text>
-        <text x="20" y="70" class="value" fill="#FB7185">−227,896</text>
+        <text x="20" y="70" class="value" fill="#FB7185">−325,864</text>
         <text x="20" y="94" class="note">refactors included</text>
       </g>
       <g transform="translate(560 92)">
         <rect width="240" height="112" rx="18" fill="#0F1F38" stroke="#334155"/>
         <text x="20" y="29" class="label">NET CHANGE</text>
-        <text x="20" y="70" class="value" fill="#60A5FA">+738,994</text>
+        <text x="20" y="70" class="value" fill="#60A5FA">+1,056,402</text>
         <text x="20" y="94" class="note">added minus removed</text>
       </g>
       <g transform="translate(820 92)">
         <rect width="240" height="112" rx="18" fill="#0F1F38" stroke="#334155"/>
         <text x="20" y="29" class="label">COMMITS SCANNED</text>
-        <text x="20" y="70" class="value" fill="#22D3EE">373</text>
-        <text x="20" y="94" class="note">15 original repositories</text>
+        <text x="20" y="70" class="value" fill="#22D3EE">469</text>
+        <text x="20" y="94" class="note">16 repositories with activity</text>
       </g>
   <text x="40" y="242" class="section">MOST CODE CHANGED BY REPOSITORY</text>
   <circle cx="842" cy="238" r="5" fill="#34D399"/>
@@ -68,33 +68,33 @@
         <text x="790" y="20" class="changes">+451,240  −226,886</text>
       </g>
       <g transform="translate(40 314)">
+        <text x="0" y="20" class="repo">ghostinit</text>
+        <rect x="250" y="5" width="510" height="18" rx="9" fill="#1E293B"/>
+        <rect x="250" y="5" width="312" height="18" rx="9" fill="#34D399"/>
+        <rect x="562" y="5" width="74" height="18" rx="9" fill="#FB7185"/>
+        <text x="790" y="20" class="changes">+415,376  −97,968</text>
+      </g>
+      <g transform="translate(40 358)">
         <text x="0" y="20" class="repo">testing-4</text>
         <rect x="250" y="5" width="510" height="18" rx="9" fill="#1E293B"/>
         <rect x="250" y="5" width="337" height="18" rx="9" fill="#34D399"/>
         
         <text x="790" y="20" class="changes">+448,318  −119</text>
       </g>
-      <g transform="translate(40 358)">
+      <g transform="translate(40 402)">
         <text x="0" y="20" class="repo">actionize</text>
         <rect x="250" y="5" width="510" height="18" rx="9" fill="#1E293B"/>
         <rect x="250" y="5" width="11" height="18" rx="9" fill="#34D399"/>
         
         <text x="790" y="20" class="changes">+14,915  −104</text>
       </g>
-      <g transform="translate(40 402)">
+      <g transform="translate(40 446)">
         <text x="0" y="20" class="repo">laravel-exemple</text>
         <rect x="250" y="5" width="510" height="18" rx="9" fill="#1E293B"/>
         <rect x="250" y="5" width="11" height="18" rx="9" fill="#34D399"/>
         
         <text x="790" y="20" class="changes">+14,114  −1</text>
       </g>
-      <g transform="translate(40 446)">
-        <text x="0" y="20" class="repo">noor-elearning</text>
-        <rect x="250" y="5" width="510" height="18" rx="9" fill="#1E293B"/>
-        <rect x="250" y="5" width="9" height="18" rx="9" fill="#34D399"/>
-        
-        <text x="790" y="20" class="changes">+11,156  −623</text>
-      </g>
   <line x1="40" y1="496" x2="1040" y2="496" stroke="#334155"/>
-  <text x="40" y="518" class="footnote">GitHub contributor statistics · Original, non-archived public repositories · Default branches · Generated or vendored code may be included</text>
+  <text x="40" y="518" class="footnote">GitHub contributor statistics · 21 public repositories scanned · Default branches · Generated or vendored code may be included</text>
 </svg>

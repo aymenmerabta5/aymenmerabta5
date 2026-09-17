@@ -2,13 +2,19 @@ name: Refresh profile metrics
 
 on:
   schedule:
-    - cron: "17 2 * * *"
+    # GitHub Actions' shortest supported interval. Offset from minute zero to
+    # reduce congestion; scheduled runs can still be delayed by GitHub.
+    - cron: "3/5 * * * *"
   workflow_dispatch:
+  repository_dispatch:
+    types:
+      - refresh-profile-metrics
   push:
     branches:
       - main
     paths:
       - .github/workflows/metrics.yml
+      - .github/scripts/generate-code-stats.mjs
 
 permissions:
   contents: write

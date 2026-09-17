@@ -39,7 +39,7 @@ async function github(
     }
 
     if (response.status === 204) {
-      return null;
+      return [];
     }
 
     if (!response.ok) {
@@ -76,11 +76,24 @@ const repositoryStats = await inBatches(
   originalRepositories,
   4,
   async (repository) => {
-    const contributors =
-      (await github(`/repos/${repository.full_name}/stats/contributors`, {
+    const contributors = await github(
+      `/repos/${repository.full_name}/stats/contributors`,
+      {
         attempts: 3,
         allowPending: true,
-      })) || [];
+      },
+    );
+
+    if (!contributors) {
+      return {
+        name: repository.name,
+        additions: 0,
+        deletions: 0,
+        commits: 0,
+        ready: false,
+      };
+    }
+
     const contribution = contributors.find(
       (entry) => entry.author?.login?.toLowerCase() === username.toLowerCase(),
     );
@@ -91,6 +104,7 @@ const repositoryStats = await inBatches(
         additions: 0,
         deletions: 0,
         commits: 0,
+        ready: true,
       };
     }
 
@@ -100,14 +114,36 @@ const repositoryStats = await inBatches(
         additions: totals.additions + week.a,
         deletions: totals.deletions + week.d,
         commits: totals.commits + week.c,
+        ready: true,
       }),
-      { name: repository.name, additions: 0, deletions: 0, commits: 0 },
+      {
+        name: repository.name,
+        additions: 0,
+        deletions: 0,
+        commits: 0,
+        ready: true,
+      },
     );
   },
 );
 
+const readyRepositories = repositoryStats.filter((repository) => repository.ready);
+const pendingRepositories = repositoryStats.filter(
+  (repository) => !repository.ready,
+);
+
+if (pendingRepositories.length > 0) {
+  throw new Error(
+    `Refusing to publish partial statistics while GitHub is computing: ${pendingRepositories
+      .map((repository) => repository.name)
+      .join(", ")}`,
+  );
+}
+
 const activeRepositories = repositoryStats.filter(
-  (repository) => repository.additions > 0 || repository.deletions > 0,
+  (repository) =>
+    repository.ready &&
+    (repository.additions > 0 || repository.deletions > 0),
 );
 
 const totals = activeRepositories.reduce(
@@ -150,6 +186,9 @@ const updated = new Intl.DateTimeFormat("en-GB", {
   day: "2-digit",
   month: "short",
   year: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  hourCycle: "h23",
   timeZone: "Africa/Algiers",
 }).format(new Date());
 
@@ -176,7 +215,7 @@ const cards = [
     label: "COMMITS SCANNED",
     value: formatNumber(totals.commits),
     color: "#22D3EE",
-    note: `${activeRepositories.length} original repositories`,
+    note: `${activeRepositories.length} repositories with activity`,
   },
 ];
 
@@ -251,7 +290,7 @@ const svg = `<svg width="1080" height="535" viewBox="0 0 1080 535" fill="none" x
   <text x="932" y="242" class="updated">Removed</text>
   ${rowMarkup}
   <line x1="40" y1="496" x2="1040" y2="496" stroke="#334155"/>
-  <text x="40" y="518" class="footnote">GitHub contributor statistics · Original, non-archived public repositories · Default branches · Generated or vendored code may be included</text>
+  <text x="40" y="518" class="footnote">GitHub contributor statistics · ${readyRepositories.length} public repositories scanned · Default branches · Generated or vendored code may be included</text>
 </svg>
 `;
 
