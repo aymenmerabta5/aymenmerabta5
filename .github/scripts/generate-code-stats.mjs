@@ -69,7 +69,10 @@ const repositories = await github(
 );
 
 const originalRepositories = repositories.filter(
-  (repository) => !repository.fork && !repository.archived,
+  (repository) =>
+    !repository.fork &&
+    !repository.archived &&
+    repository.name.toLowerCase() !== username.toLowerCase(),
 );
 
 const repositoryStats = await inBatches(

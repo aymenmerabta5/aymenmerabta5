@@ -70,7 +70,7 @@ Explore the case studies and more shipped work on my **[portfolio](https://aymen
 </p>
 
 <p align="center">
-  <sub>Locally generated GitHub cards refresh automatically on a five-minute cycle; the contribution, streak, and language services may use their own caches. Code-line totals use GitHub's asynchronously computed contributor statistics for original, non-archived repositories and may briefly lag after a push or visibility change. Generated or vendored code may be included.</sub>
+  <sub>Locally generated GitHub cards refresh automatically on a five-minute cycle; the contribution, streak, and language services may use their own caches. Code-line totals use GitHub's asynchronously computed contributor statistics for original, non-archived code repositories (excluding this generated profile repository) and may briefly lag after a push or visibility change. Generated or vendored code may be included.</sub>
 </p>
 
 ## Technology stack
