@@ -20,7 +20,7 @@ I'm a full-stack engineer based in Algeria, building the software businesses run
 
 Alongside product engineering, I explore applied AI through computer vision, LLM fine-tuning, and from-scratch implementations of foundational machine-learning concepts.
 
-- Shipped **7 systems** across commerce, healthcare, e-learning, and other domains
+- Shipped **8 systems** across commerce, healthcare, e-learning, and other domains
 - Build primarily with **TypeScript, Next.js, React, Node.js, PostgreSQL, and Python**
 - Interested in **software architecture, developer tooling, reliable AI systems, and excellent product UX**
 - Currently **accepting new projects and professional collaborations**
